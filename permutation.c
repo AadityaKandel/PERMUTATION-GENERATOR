@@ -53,12 +53,14 @@ int main(){
     int arr[]={1,2,3,4};
     int length=sizeof(arr)/sizeof(arr[0]);
     int copy[length];
+    int permutation=0;
     
     for(int i=0;i<length;i++){
         copy[i]=arr[i];
     }
     
     do{
+        permutation++;
         int pivot=first_step(arr,length);
         
         if (pivot==-1){
@@ -98,4 +100,5 @@ int main(){
         }
         display_sequence(arr,length);
     }while(memcmp(arr,copy,sizeof(copy))!=0);
+    printf("\n\nTotal Permutation: %d",permutation);
 }
