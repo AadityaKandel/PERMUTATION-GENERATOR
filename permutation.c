@@ -65,7 +65,7 @@ int main(){
         
         if (pivot==-1){
             for(int i=0;i<length;i++){
-                for(int j=i+1;j<4;j++){
+                for(int j=i+1;j<length;j++){
                     if(arr[i]>arr[j]){
                         swap(&arr[j],&arr[i]);
                     }
